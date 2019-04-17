@@ -22,7 +22,7 @@
         var text;
         var num = document.getElementById("myInput").value;
         let result = 0;
-        if (!isNaN(num)) {
+        if (!isNaN(num) && num > 0) {
             while (result < num) {
                 result = result + 1;
 
@@ -41,7 +41,7 @@
             }
         }
         else {
-            text = "Please enter a number";
+            text = "Please enter a positive number";
             document.getElementById("error").innerHTML = text;
         }
     }
