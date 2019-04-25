@@ -5,7 +5,7 @@
 * This file contains function that separates the the values according to the object.
  */
 function arrayToObj(aparam) {
-    let arrayObject =
+    let result =
         {
             string:[], numbers:[], boolean:[]
         }
@@ -14,17 +14,17 @@ function arrayToObj(aparam) {
         switch(typeof aparam[i])
         {
             case 'string':
-                arrayObject.string.push(aparam[i]);
+                result.string.push(aparam[i]);
                 break;
             case 'boolean':
-                arrayObject.boolean.push(aparam[i]);
+                result.boolean.push(aparam[i]);
                 break;
             case 'number':
-                arrayObject.numbers.push(aparam[i]);
+                result.numbers.push(aparam[i]);
                 break;
         }
     }
-    return arrayObject;
+    return result;
 }
 
 var input = [-1, 5, "cat", false, 10.2, true, "dog"];
